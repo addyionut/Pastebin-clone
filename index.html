@@ -8,18 +8,26 @@
     <title>Pastebin clone</title>
   </head>
   <body>
-    <center><h1>Pastebin clone</h1></center>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">PASTEBIN CLONE</span>
+      </div>
+    </nav>
     <div class="container" id="container">
       <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">New paste</label>
-        <textarea onfocus="value=''" class="form-control" id="newPaste" rows="4"></textarea>
+        <textarea onfocus="value=''" class="form-control" id="newPaste" rows="3"></textarea>
       </div>
       <div class="input-group input-group-sm mb-3">
         <span class="input-group-text" id="inputGroup-sizing-sm">Title</span>
         <input type="text" onfocus="value=''" class="form-control" id="title" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" >
       </div>
       <div class="d-grid gap-2">
-        <button class="btn btn-primary" type="button" onclick="savePaste()">Save</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="savePaste()">Save</button>
+      </div><br>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button type="button" class="btn btn-secondary btn-lg" onclick="editPaste()">Edit</button>
+        <button type="button" class="btn btn-secondary btn-lg" onclick="deletePaste()">Delete</button>  
       </div>
     </div>
     <br><input class="form-control" id = "label" type="text" value="Your paste is posted here (title : paste)" aria-label="Disabled input example" disabled readonly><br>
